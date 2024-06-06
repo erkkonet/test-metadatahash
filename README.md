@@ -2,7 +2,7 @@
 
 Simple example using [subxt](https://github.com/paritytech/subxt) to test the checkmetadata-hash extension in a runtime.
 
-First download the metadata for your runtime:
+First download the metadata for your runtime (needs `subxt-cli` installed):
 
 ```shell
 subxt metadata -f bytes --url ws://127.0.0.1:9944 > artifacts/metadata
@@ -20,7 +20,8 @@ then adjust the symbol and decimals in `extra_info` in [main.rs](src/main.rs) to
 > The token_symbol and decimals should match the runtime wasm-builder `enable_metadata_hash(token_symbol, decimals)` 
 arguments, which may differ from the chainspec properties.
 
-Then run
+You might want to change the test extrinsic (a Balances transfer from `//Alice` to `//Bob`). Then run:
+
 ```shell
 cargo run
 ```
