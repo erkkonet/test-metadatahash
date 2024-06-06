@@ -1,0 +1,20 @@
+[package]
+name = "test-metadatahash"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+subxt = { version = "0.37.0" }
+subxt-signer = { version = "0.37.0" }
+merkleized-metadata = { version = "0.1.0" }
+codec = { package = "parity-scale-codec", version = "3.6.9", default-features = false, features = [
+    "derive",
+] }
+scale-decode = { version = "0.13.0", features = ["derive"] }
+scale-info = "2.11.3"
+scale-encode = { version = "0.7.1", features = ["derive"] }
+frame-metadata = { version = "16.0.0", features = [
+    "current",
+], default-features = false }
+array-bytes = "6.2.3"
